@@ -1,0 +1,14 @@
+.parent {
+  display: flex;
+  /* height: 100px; */
+}
+
+.menu {
+  width: 300px;
+  background-color: violet;
+}
+
+.content {
+  flex: 1;
+  background-color: aqua;
+}

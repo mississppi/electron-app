@@ -57,16 +57,22 @@ var renderer = {
         extensions: ['.json', '.js', '.jsx', '.css', '.ts', '.tsx']
     },
     module: {
-        rules: [{
-            test: /\.(tsx|ts)$/,
-            use: [
-                'ts-loader'
-            ],
-            include: [
-                path.resolve(__dirname, 'src'),
-                path.resolve(__dirname, 'node_modules'),
-            ],
-        }]
+        rules: [
+            {
+                test: /\.(tsx|ts)$/,
+                use: [
+                    'ts-loader'
+                ],
+                include: [
+                    path.resolve(__dirname, 'src'),
+                    path.resolve(__dirname, 'node_modules'),
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader']
+            }
+        ]
     },
     plugins: [],
 };

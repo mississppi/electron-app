@@ -1,19 +1,15 @@
 import React from "react";
+import TemplateComponent from "../Components/TemplateComponent";
+import { Layout, Menu, Breadcrumb } from 'antd';
 import Editor from '../Components/EditorComponent'
-type Props = {};
+import { LeftNavi } from "../Components/LeftNaviComponent";
+// import  '../styles/App.css'
+
+const { Header, Content, Footer } = Layout;
 
 const App: React.FC = () => {
-    const style = {
-        width: "50%",
-        margin: "0 auto",
-        marginTop: 150
-    };
     return (
-        <div>
-            <div style={style}>
-                <Editor />
-            </div>
-        </div>
+        <TemplateComponent />
     )
 }
 
