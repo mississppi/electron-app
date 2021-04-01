@@ -1,4 +1,6 @@
 import { BrowserWindow, App, app } from "electron";
+import Datastore from "nedb";
+import {PostItemStore} from "../db/stores/postItem";
 
 class MyApp {
   private window?: BrowserWindow;
@@ -12,6 +14,8 @@ class MyApp {
     this.app.on("ready", this.onReady);
     this.app.on("activate", this.onActivated);
     this.app.on("window-all-closed", this.onWindowAllClosed);
+    const store = new PostItemStore();
+    console.log(store.readAll());
   }
 
   private onReady = () => {
